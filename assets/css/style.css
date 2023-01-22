@@ -14,17 +14,18 @@ textarea {
   border: none;
   resize: none;
   color: #000000;
-  border-left: 1px solid black;
+  border-left: 2px solid black;
   padding: 10px;
 }
 
 #currentDay {
-  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 22px;
   font-weight: 700;
 }
 
 #currentTime {
-  text-transform: uppercase;
   letter-spacing: 2px;
 }
 
@@ -43,8 +44,7 @@ textarea {
 
 .time-block {
   text-align: center;
-  border-radius: 15px;
-  margin: 0 auto;
+  margin: 5px auto;
 }
 
 .row {
@@ -54,35 +54,33 @@ textarea {
 }
 
 .hour {
-  background-color: #ffffff;
+  border-radius: 10px 0 0 10px!important;
   color: #000000;
-  border-top: 1px dashed #000000;
-  padding: 30px;
+  align-self: center;
 }
 
 .past {
   border-radius: 15px;
-  background-color: #d3d3d3;
+  background-color: #d4d4d4;
   color: white;
 }
 
 .present {
   border-radius: 15px;
-  background-color: #ff6961;
+  background-color: #77dd77;
   color: white;
 }
 
 .future {
   border-radius: 15px;
-  background-color: #77dd77;
+  background-color: #bfe6bf;
   color: white;
 }
 
 .saveBtn {
   font-size: 18px;
   background-color: #06aed5;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border-radius: 0 10px 10px 0!important;
   color: white;
 }
 

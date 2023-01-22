@@ -35,8 +35,7 @@ $(".saveBtn").on("click", function () {
     // Using the above variables, I am able to save the items into an object in local storage
     localStorage.setItem(eventTime, eventDescription)
     console.log(localStorage)
-}
-)
+})
 
 // Created a function to retrieve the saved items in local storage and display them in the right hour blocks
 function retrieveEvent() {
@@ -63,6 +62,14 @@ $(".clearAll").on("click", function () {
         // If the user click cancel it will not delete anything
         alert("No events deleted")
     }
+})
+
+// Setting an on click function for the saveBtn
+$('.trashBtn').on('click', function () {
+    var eventTime = $('.saveBtn').siblings('.hour').text()
+    var eventDescription = $('.saveBtn').siblings('.description').val()
+    localStorage.clear(eventTime, eventDescription)
+    location.reload();
 })
 
 // Calling the timeBlockState function to display the correct colours needed
