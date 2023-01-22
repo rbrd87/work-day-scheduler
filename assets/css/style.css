@@ -91,6 +91,16 @@ textarea {
   transition: all 0.2s ease-in-out;
 }
 
-.text-input {
-  border: 1px solid black;
+.clearAll {
+  float: right;
+  font-size: 18px;
+  border-radius: 5px;
+  margin-top: 50px;
+  padding: 10px 20px;
+}
+
+.clearAll:hover {
+  float: right;
+  background-color: #b82a38;
+  border-radius: 5px;
 }
