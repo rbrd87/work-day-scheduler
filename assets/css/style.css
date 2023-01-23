@@ -1,3 +1,14 @@
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --grey: #d4d4d4;
+  --green: #77dd77;
+  --lightGreen: #dcf0dc;
+  --blue: #06aed5;
+  --red: #dc3545;
+  --darkRed: #b82a38;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -13,8 +24,8 @@ textarea {
   background: transparent;
   border: none;
   resize: none;
-  color: #000000;
-  border-left: 2px solid black;
+  color: var(--black);
+  border-left: 1px solid #252525;
   padding: 10px;
 }
 
@@ -32,9 +43,9 @@ textarea {
 .jumbotron {
   text-align: center;
   background-color: transparent;
-  color: black;
+  color: var(--black);
   border-radius: 0;
-  border-bottom: 10px solid black;
+  border-bottom: 10px solid var(--black);
   padding: 10px;
 }
 
@@ -50,41 +61,53 @@ textarea {
 .row {
   white-space: pre-wrap;
   height: 80px;
-  border-top: 1px solid white;
+  border-top: 1px solid var(--white);
 }
 
 .hour {
   border-radius: 10px 0 0 10px!important;
-  color: #000000;
+  color: var(--black);
   align-self: center;
 }
 
 .past {
   border-radius: 15px;
-  background-color: #d4d4d4;
-  color: white;
+  background-color: var(--grey);
+  color: var(--white);
 }
 
 .present {
   border-radius: 15px;
-  background-color: #77dd77;
-  color: white;
+  background-color: var(--green);
+  color: var(--white);
 }
 
 .future {
   border-radius: 15px;
-  background-color: #bfe6bf;
-  color: white;
+  background-color: var(--lightGreen);
+  color: var(--white);
 }
 
 .saveBtn {
   font-size: 18px;
-  background-color: #06aed5;
-  border-radius: 0 10px 10px 0!important;
-  color: white;
+  background-color: var(--blue);
+  border-radius: 0!important;
+  color: var(--white);
 }
 
 .saveBtn:hover {
+  font-size: 24px;
+  transition: all 0.2s ease-in-out;
+}
+
+.trashBtn {
+  font-size: 18px;
+  background-color: var(--red);
+  border-radius: 0 10px 10px 0!important;
+  color: var(--white);
+}
+
+.trashBtn:hover {
   font-size: 24px;
   transition: all 0.2s ease-in-out;
 }
@@ -99,6 +122,6 @@ textarea {
 
 .clearAll:hover {
   float: right;
-  background-color: #b82a38;
+  background-color: var(--darkRed);
   border-radius: 5px;
 }

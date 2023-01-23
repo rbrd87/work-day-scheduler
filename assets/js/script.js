@@ -34,7 +34,6 @@ $(".saveBtn").on("click", function () {
     let eventDescription = $(this).siblings(".description").val()
     // Using the above variables, I am able to save the items into an object in local storage
     localStorage.setItem(eventTime, eventDescription)
-    console.log(localStorage)
 })
 
 // Created a function to retrieve the saved items in local storage and display them in the right hour blocks
@@ -50,9 +49,9 @@ function retrieveEvent() {
     })
 }
 
-// Created a clear all button to delete all events from the work planner.
+// Created a clear all button to delete all events from the work planner
 $(".clearAll").on("click", function () {
-    // When the button is clicked a confirmation dialog box will show.
+    // When the button is clicked a confirmation dialog box will show
     let deleteConfirm = confirm("Are you sure you want to clear all events?")
     // If the user clicks okay it clears everything from local storage and then reloads the page to show the empty fields
     if (deleteConfirm === true) {
@@ -64,11 +63,14 @@ $(".clearAll").on("click", function () {
     }
 })
 
-// Setting an on click function for the saveBtn
-$('.trashBtn').on('click', function () {
-    var eventTime = $('.saveBtn').siblings('.hour').text()
-    var eventDescription = $('.saveBtn').siblings('.description').val()
-    localStorage.clear(eventTime, eventDescription)
+// Setting an on click function for the trashBtn to delete individual events
+$(".trashBtn").on("click", function () {
+    // As in the saveBtn, using 'this' to save the .hour and .description values into variables
+    let eventTime = $(this).siblings(".hour").text()
+    let eventDescription = $(this).siblings(".description").val()
+    // Using the above saved variables, I am able to remove the items from the local storage
+    localStorage.removeItem(eventTime, eventDescription)
+    // Reload the page to show the empty fields
     location.reload();
 })
 
